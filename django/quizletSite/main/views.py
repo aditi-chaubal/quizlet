@@ -8,3 +8,6 @@ def homePage(response):
 
 def v1(response):
     return HttpResponse("<h1>view one !!<h1>")
+
+def create(response):
+    return HttpResponse("<h1>create a new set<h1>")
