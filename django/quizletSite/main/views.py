@@ -3,11 +3,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+def index(response):
+    return render(response, "main/base.html", {})
+
 def homePage(response):
-    return HttpResponse("<h1>home page !!<h1>")
+    return render(response, "main/home.html", {})
 
-def v1(response):
-    return HttpResponse("<h1>view one !!<h1>")
-
-def create(response):
-    return HttpResponse("<h1>create a new set<h1>")
+'''def create(response):
+    return HttpResponse("<h1>create a new set<h1>")'''
