@@ -9,5 +9,5 @@ def index(response):
 def homePage(response):
     return render(response, "main/home.html", {})
 
-'''def create(response):
-    return HttpResponse("<h1>create a new set<h1>")'''
+def create(response):
+    return HttpResponse("<h1>create a new set<h1>")
