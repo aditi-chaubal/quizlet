@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import createNewFlashcard
 
 # Create your views here.
 
@@ -10,4 +11,5 @@ def homePage(response):
     return render(response, "main/home.html", {})
 
 def create(response):
-    return HttpResponse("<h1>create a new set<h1>")
+    form = createNewFlashcard()
+    return render(response, "main/create.html", {"form": form})

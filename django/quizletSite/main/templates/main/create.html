@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block title %} create flashcards {% endblock %}
+
+{% block content %}
+    <h1> create a new flashcard set </h1>
+    <form method = "post" action = "/create/">
+        {{form}}
+        <button type = "submit", name = "save"> create new </button>
+    </form>
+{% endblock %}
+
