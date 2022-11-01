@@ -11,5 +11,9 @@ def homePage(response):
     return render(response, "main/home.html", {})
 
 def create(response):
-    form = createNewFlashcard()
+    if response.method == "POST":
+        form = createNewFlashcard(response.POST)
+
+    else:
+        form = createNewFlashcard()
     return render(response, "main/create.html", {"form": form})
